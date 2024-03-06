@@ -1,0 +1,48 @@
+{
+    // 请改为您自己的UID
+    "uid": "*****",
+    // 请改为您自己的cookie，注意不要省略"nexusphp_u2="
+    "cookie": "nexusphp_u2=*************************************************************************************",
+    // 只对上传时间为uploadTimeInterval(单位秒)内的种子释放魔法↓0x↑2.33x（全局）, 对以外的种子释放魔法↓0x（私人）。默认为2天（172800S）
+    // 分为一阶段与二阶段，如果种子发布时间小于uploadTimeInterval则运行rule1，如果大部时间大于uploadTimeInterval则运行rule2
+    "uploadTimeInterval": 172800,
+    // 执行间隔（S）
+    "sleeptime": 10,
+    // 脚本状态监控时间（S）
+    "interval": 60,
+    "http_proxy": {
+        // 设置是否开启代理(true or false)
+        "enabled": true,
+        // 设置代理url
+        "http": "http://127.0.0.1:7890",
+        "https": "http://127.0.0.1:7890"
+    },
+    // user: ALL为地图炮, SELF为恢复系, OTHER为治愈系
+    // user_other: 如user为OTHER，则需要填写对方uid
+    // start: 0表示立即生效
+    // hours: 魔法持续时间, 24-360 hours
+    // promotion: 2为免费, 3为2x, 4为2xFree, 5为50%off, 6为2x50%off, 7为30%off, 8为other(若选择此项,需要传递ur及dr参数)
+    // ur: 1.3~2.33 (上传1.3x-2.33x)
+    // dr: 0~0.8 (下载0x-0.8x)
+    // comment: 魔法咒语什么的, 非必须
+    "rule1": {
+        "user": "ALL",
+        "user_other": "",
+        "start": 0,
+        "hours": 24,
+        "promotion": 8,
+        "ur": 2.33,
+        "dr": 0,
+        "comment": ""
+    },
+    "rule2": {
+        "user": "SELF",
+        "user_other": "",
+        "start": 0,
+        "hours": 24,
+        "promotion": 2,
+        "ur": 2.33,
+        "dr": 0,
+        "comment": ""
+    }
+}
